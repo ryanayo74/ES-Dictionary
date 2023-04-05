@@ -147,7 +147,7 @@ ul {
 #content-area {
     position: absolute;
     width: calc(100% - 320px);
-    height: 200vh;
+    height: 150vh;
     right:0;
     padding: 0px 15px 0 15px;
     transition: .5s;
@@ -242,6 +242,8 @@ ul {
     align-items: center;
     gap:5%;
     height: 50px;
+    width: 100%;
+    justify-content: center;
 }
 
 .menubar ul li {
@@ -269,22 +271,24 @@ ul {
 }
 
 .dictionary-box {
+    display: flex;
+    justify-content: center;
     width: 100%;
-    min-height: 40%;
-    max-height: max-content;
+    height: 80vh;
     backdrop-filter: blur(10px);
     margin-top: 20px;
     border-radius: 10px;
-    display: flex;
     gap: 10px;
     padding: 10px;
-
 }
 
 .dictionary-box .left-content {
+    display: flex;
     width: 30%;
-    min-height: 100%;
-    max-height: auto;
+    gap: 10px;
+    padding-left: 10px;
+    justify-content: center;
+    align-items: center;
     background-color: #525252;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -298,52 +302,19 @@ ul {
 
 
 .dictionary-box .right-content {
-    width: 30%;
-    min-height: fit-content;
-    max-height: 100%;
-    background-color: #ffffff;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    display: inline-flex;
-    justify-content: space-between;
-    padding: 20px;
-}
-
-.dictionary-box .left-content {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    text-align: center;
+    width: 50%;
     flex-direction: column;
-}
-
-.dictionary-box .left-content .property {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-}
-
-.dictionary-box .left-content .property span {
-    color: #fff;
-    font-size: 2em;
-    padding: 50px;
-    text-transform: capitalize;
-
-}
-
-.dictionary-box .right-content {
-    flex-direction: column;
+    padding: 10px;
     gap: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    background-color: #ffffff;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .dictionary-box .right-content .top-line {
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -351,18 +322,18 @@ ul {
     width: 100%;
 }
 
-.dictionary-box .right-content .center-line {
+.dictionary-box .right-content .central-line {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.dictionary-box .right-content .property {
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-    margin: 1rem 0;
-    column-gap: 3rem;
+.dictionary-box .bottom-line p{
+    margin-top: 15px;
+}
+
+.dictionary-box .right-content #audio {
+    width: 200px;
 }
 
 .dictionary-box .right-content #audio audio {
@@ -372,16 +343,20 @@ ul {
 }
 
 .dictionary-box .history {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
     background-color: #fff;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    width: 20%;
     padding: 10px;
 }
 
 .dictionary-box .weather-box {
+    display: flex;
+    flex-direction: column;
     background-color: #525252;
-    width: 30%;
+    width: 50%;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
@@ -392,16 +367,17 @@ ul {
   background: #43AFFC;
 }
 .wrapper{
-  width: 400px;
+  width: 100%;
   background: #fff;
   border-radius: 7px;
   box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
+  height: 100%;
 }
 .wrapper header{
-  display: flex;
-  font-size: 21px;
+  text-align: center;
+  font-size: 20px;
   font-weight: 500;
-  color: #43AFFC;
+  color: #000000;
   padding: 16px 15px;
   align-items: center;
   border-bottom: 1px solid #ccc;
@@ -418,6 +394,11 @@ header i{
 .wrapper .input-part{
   margin: 20px 25px 30px;
 }
+
+.weather-box .wrapper .content input {
+    border-radius: 30px;
+}
+
 .wrapper.active .input-part{
   display: none;
 }
@@ -644,18 +625,12 @@ header i{
         font-style: italic;
     }
 @media only screen and (max-width: 1080px){
-
-    body {
-        overflow: visible;
-    }
-
     #content-area {
         flex-direction: column;
     }
 
     .dictionary-box {
         flex-direction: column;
-        height: fit-content;
         justify-content: center;
         align-items: center;
     }
@@ -664,10 +639,13 @@ header i{
         width: 100%;
     }
 
+    .dictionary-box .left-content .image-box #image {
+        padding: 10px;
+    }
+
     .dictionary-box .right-content {
         flex-direction: column;
         height: 100%;
-        width: 100%;
         align-items: center;
         width: 100%;
     }
@@ -676,12 +654,55 @@ header i{
         width: 100%;
     }
 
-    @media only screen and (max-width: 970px){
+    .dictionary-box .weather-box {
+        width: 100%;
+        height: 400px;
+    }
+
+    .wrapper header {
+        color: #000;
+    }
+
+    .wrapper .weather-part {
+        margin-top: 10px;
+    }
+
+    .weather-part img{
+        width: 70px;
+    }
+
+    .weather-part .temp{
+        font-size: 45px;
+        display: flex;
+    }
+
+    .weather-part .temp .deg {
+        margin: 0;
+    }
+    
+    .weather-part .location{
+        font-size: 40px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .bottom-details .column {
+        padding: 12px 0;
+    }
+
+    .details .temp {
+        font-size: 20px;
+    }
+
+    .humidity span {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 970px){
         #footer-area .flex-container{
             flex-direction: column;
         }
-    
-    }
 }
 
 @media only screen and (max-width: 850px) {

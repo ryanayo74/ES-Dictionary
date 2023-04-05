@@ -17,7 +17,7 @@ Group 2
 
 ## **Description**
 
-ES Dictionary is a Website dictionary that you can use thru Web, Tablet and Phone where you can browse word meaning with images of your search. Enjoy resources that provides definitions and other information related to words and phrases. Users can search for a particular word by typing it into a search bar. The project include examples of how the word is used in context, its etymology or origin, and voice pronunciations.
+ES Dictionary is a Website dictionary that you can use thru Web, Tablet and Phone where everyone can browse word meaning with images that put in the search. Enjoy resources that provides definitions and other information related to words and phrases. Users can search for a particular word by typing it into a search bar. The project include voice pronunciations. User can also know what are the tropical weather of any city by typing it in our weather area.
 
 Just visit the our project, just click here: [ES Dictionary](insertlinkhere).
 
@@ -66,10 +66,4 @@ We use Figma for wireframe. HTML, CSS, Javascript for the front-end, For the Bac
 
 5. Ryan Ayo - Developer on Javascript 
 
-6. Agaspar Latayada - Documentation and Developer on Mobile Version
-
-
-Updates:
-
-Emilio Tubao - trying to git push
-Bernard Opis  - trying to git 
+6. Agaspar Latayada - Documentation and Developer on Mobile Version 
