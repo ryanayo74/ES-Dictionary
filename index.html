@@ -5,40 +5,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" 
+    content="ES Dictionary is our API-drivin mini web application built with CSS, Bootstrap, JavaScript and APIs to showcase our learnings from Kodego Bootcamp, and is deployed on Netlify for seamless performance, ES Dictionary is an development application where you can search any words that comes to your mind and search it using a dictionary and also provides the latest weather update today." >
+
+    <title>ES Dictionary</title>
+
     <link rel="stylesheet" href="css/styles.css">
-    <title>ES Dictionary </title>
 </head>
 
 <body>
     <div class="container">
         <div id="fixed-sidebar">
             <ul>
-                <li><a href="#">
-                        <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
+                <li><a href="#0">
+                        <span class="icon" ><ion-icon name="book-outline"></ion-icon></span>
                         <span class="title"> ES Dictionary </span>
                     </a>
                 </li>
-                <li class="hovered"><a href="#">
-                        <span class="icon"><ion-icon name="library"></ion-icon></span>
+                <li class="hovered"><a href="#0">
+                        <span class="icon" ><ion-icon name="library"></ion-icon></span>
                         <span class="title"> Dashboard </span>
                     </a>
                 </li>
-                <li><a href="#">
+                <li><a href="#0">
                         <span class="icon"><ion-icon name="timer-outline"></ion-icon></span>
                         <span class="title"> History </span>
                     </a>
                 </li>
-                <li><a href="#">
-                        <span class="icon"><ion-icon name="cog-outline"></ion-icon></span>
+                <li><a href="#0">
+                        <span class="icon" ><ion-icon name="cog-outline"></ion-icon></span>
                         <span class="title"> Settings </span>
                     </a>
                 </li>
-                <li><a href="#">
-                        <span class="icon"><ion-icon name="chatbubbles"></ion-icon></span>
+                <li><a href="#0">
+                        <span class="icon" ><ion-icon name="chatbubbles"></ion-icon></span>
                         <span class="title"> Support </span>
                     </a>
                 </li>
             </ul>
+
+            <div class="footer_copyright">
+                    <p>&copy; Copyright 2023 Dashboard Kodego Group 2 &trade;</p>
+        
+            
+            </div>      
         </div>
 
         <div id="content-area">
@@ -52,25 +62,25 @@
                     <ion-icon name="arrow-forward-circle-sharp" class="search-btn" id="search-btn"></ion-icon>
                 </div>
                 <div class="user-box">
-                    <img src= "images/giphy.gif">
+                    <img src= "images/giphy.webp" alt="es-dictionary-webp-gif">
                 </div>
             </div>
             <div class="menubar">
                 <ul>
-                    <li><a href="#">
+                    <li><a href="#0">
                             <span class="icon"><ion-icon name="save"></ion-icon></span>
-                            <span class="title"> Save Word </span>
+                            <span class="title" > Save Word </span>
 
                         </a>
                     </li>
-                    <li><a href="#">
+                    <li><a href="#0">
                             <span class="icon"><ion-icon name="add"></ion-icon></span>
                             <span class="title"> Add Word </span>
                         </a>
                     </li>
-                    <li id="clearBtn" ><a href="http://" target="_blank" rel="noopener noreferrer">
+                    <li id="clearBtn" ><a href="#0" target="_blank" rel="noopener noreferrer">
                             <span class="icon"><ion-icon name="trash-bin"></ion-icon></span>
-                            <span class="title">Clear Field</span>
+                            <span class="title" >Clear Field</span>
                         </a>
                     </li>
                 </ul>
@@ -78,18 +88,18 @@
 
             <div class="dictionary-box">
 
-                <div class="left-content">
+                <div class="left-content" id="lefty">
                     <div class="image-box">
-                        <img id="image" src="">
-                        <p>Word : <span id="title"></span></p>
+                        <img src="#0" alt="" id="image" >
+                        <p><a class="hidden" aria-hidden="true" >Word :</a><span id="title"></span></p>
                     </div>
                 </div>
 
-                <div class="right-content">
+                <div class="right-content" id="righty">
 
                     <div class="top-line">
                         <div class="title">
-                            <p>Phonetic : <span id="thisword"></span></p>
+                            <p><a class="hidden" aria-hidden="true" >Phonetic :</a><span id="thisword"></span></p>
                         </div>
                     </div>
 
@@ -97,8 +107,8 @@
                         <div id="audio"></div>
                     </div>
                     <div class="bottom-line">
-                        <p> definition : <span id="definition"></span></p>
-                        <p> Part's of Speech: <span id="part-of-speech"></span></p>
+                        <p><a class="hidden" aria-hidden="true" >definition :</a><span id="definition"></span></p>
+                        <p><a class="hidden" aria-hidden="true" >Part's of Speech:</a><span id="part-of-speech"></span></p>
                         <p id="pronoun"></p>
                         <p id="exam"></p>
                     </div>
@@ -116,28 +126,34 @@
                 <div class="weather-box">
 
                     <div class="wrapper">
-                        <header><i class='bx bx-left-arrow-alt'></i>Weather</header>
-                        <section class="input-part">
+                        <header><ion-icon id="back-icon" name="arrow-back-outline"></ion-icon>Weather</header>
+                        <div class="input-part">
                           <p class="info-txt"></p>
                           <div class="content">
                             <input type="text" spellcheck="false" placeholder="Enter city name" required>
-                           
-                          
-                        </section>
-                        <section class="weather-part">
-                          <img src="" alt="Weather Icon">
+                            <!-- WEATHER SECTION update by ROME -->
+                            <div class="toggle-switch-panel" style="padding:15px; display: flex; justify-content: space-around; align-items: center;">
+                            <p class="toggle-switch-txt">Allow Access Location</p>
+                            <button id="toggle-switch"  aria-label="Toggle switch"></button>
+
+                            </div>
+                           </div>
+                           <!-- END of update -->
+                        </div>
+                        <div class="weather-part">
+                          <img src="#0" alt="Weather Icon">
                           <div class="temp">
                             <span class="numb">_</span>
                             <span class="deg">°</span>C
                           </div>
                           <div class="weather">_ _</div>
                           <div class="location">
-                            <i class='bx bx-map'></i>
+                            <ion-icon name="location-outline"></ion-icon>
                             <span>_, _</span>
                           </div>
                           <div class="bottom-details">
                             <div class="column feels">
-                              <i class='bx bxs-thermometer'></i>
+                                <ion-icon name="thermometer-outline"></ion-icon>
                               <div class="details">
                                 <div class="temp">
                                   <span class="numb-2">_</span>
@@ -147,14 +163,14 @@
                               </div>
                             </div>
                             <div class="column humidity">
-                              <i class='bx bxs-droplet-half'></i>
+                                <ion-icon name="water-outline"></ion-icon>  
                               <div class="details">
                                 <span>_</span>
                                 <p>Humidity</p>
                               </div>
                             </div>
                           </div>
-                        </section>
+                        </div>
                       </div>
 
                 </div>
@@ -162,48 +178,6 @@
 
             </div>
 
-            <div id="footer-area">
-                <div class="flex-container">
-                    <div class="flex_box"><img src="images/logo.png" alt="logo">
-                        <h2>ES Dictionary</h2>
-
-                        <a href="#"><ion-icon class="icons" name="logo-facebook"></ion-icon></a>
-                        <a href="#"><ion-icon class="icons" name="logo-discord"></ion-icon></a>
-                        <a href="#"><ion-icon class="icons" name="logo-linkedin"></ion-icon></a>
-                        <a href="#"><ion-icon class="icons" name="logo-github"></ion-icon></a>
-                    </div>
-                    <div class="flex_box">
-                        <h2>Contributors</h2>
-                        <ul>
-                            <li>Agaspar Adrian Latayada</li>
-                            <li>Jerome Ballena</li>
-                            <li>Emilio Tubao</li>
-                            <li>Bernard Opis</li>
-                            <li>Waren Gador</li>
-                            <li>Ryan Ayo</li>
-
-                        </ul>
-                    </div>
-                    <div class="flex_box">
-                        <ul>
-                            <li>Agasparadrianlatayada@gmail.com</li>
-                            <li>Deservekindness@gmail.com</li>
-                            <li>Bernard112399@gmail.com</li>
-                            <li>Waren.gador15@gmail.com</li>
-                            <li>Eyongtubao@gmail.com</li>
-                            <li>Ryanayo74@gmail.com</li>
-                        </ul>
-                        <a href="#" class="flex_button">Subscribe</a>
-                    </div>
-                </div>
-
-
-                <div class="footer_copyright">
-                    <h2>
-                        <p>&copy; Copyright 2023 Dashboard Kodego Group 2 &trade;</p>
-                    </h2>
-                
-                </div>           
                 
             </div>
 
@@ -211,12 +185,14 @@
 
 
 
-    </div>
-    </div>
+        
 
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="js/multiple-api.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" 
+></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" 
+></script>
+    <script src="js/multiple-api.js" 
+></script>
 </body>
 
 </html>

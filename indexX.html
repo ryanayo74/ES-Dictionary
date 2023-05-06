@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="Description: ES Dictionary is an development application made by. Group 2 Devs, where you can search any words that comes to your mind and search it using a dictionary and also provides the latest weather update today."
+        content="Creator: Group 2 Devs, from KodeGo Bootcamp">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>ES Dictionary </title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="fixed-sidebar">
+            <ul>
+                <li><a href="#">
+                        <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
+                        <span class="title" name="logo"> ES Dictionary </span>
+                    </a>
+                </li>
+                <li class="hovered"><a href="#">
+                        <span class="icon"><ion-icon name="library"></ion-icon></span>
+                        <span class="sub-title" name="dashboard"> Dashboard </span>
+                    </a>
+                </li>
+                <li><a href="#">
+                        <span class="icon"><ion-icon name="timer-outline"></ion-icon></span>
+                        <span class="sub-title"> History </span>
+                    </a>
+                </li>
+                <li><a href="#">
+                        <span class="icon"><ion-icon name="cog-outline"></ion-icon></span>
+                        <span class="sub-title"> Settings </span>
+                    </a>
+                </li>
+                <li><a href="#">
+                        <span class="icon"><ion-icon name="chatbubbles"></ion-icon></span>
+                        <span class="sub-title"> Support </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="content-area">
+            <div class="navbar">
+                <div class="toggle">
+                    <ion-icon name="menu"></ion-icon>
+                </div>
+                <div class="search-box">
+                    <ion-icon name="search"></ion-icon>
+                    <input id="inputTxt" type="text" placeholder="Search Word...">
+                    <ion-icon name="arrow-forward-circle-sharp" class="search-btn"></ion-icon>
+                </div>
+                <div class="user-box">
+                    <img src="./images/profile.webp">
+                </div>
+            </div>
+            <div class="menubar">
+                <ul>
+                    <li><a href="#0">
+                            <span class="icon"><ion-icon name="save"></ion-icon></span>
+                            <span class="title"> Save Word </span>
+
+                        </a>
+                    </li>
+                    <li><a href="#0">
+                            <span class="icon"><ion-icon name="add"></ion-icon></span>
+                            <span class="title"> Add Word </span>
+                        </a>
+                    </li>
+                    <li><a href="#0" target="_blank" rel="noopener noreferrer">
+                            <span class="icon"><ion-icon name="trash-bin"></ion-icon></span>
+                            <span class="title">Clear Field</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="dictionary-box">
+
+                <div class="left-content">
+                    <div class="property">
+                        <h2></h2>
+                        <span class="word"></span>
+                    </div>
+                </div>
+                <div class="right-content">
+                    <div class="dic-left">
+                        <div class="property">
+                            <span class="word"></span>
+                            <span class="word"></span>
+                        </div>
+                        <div class="property">
+                            <span class="word"></span>
+                            <span class="word"></span>
+                        </div>
+                        <div class="property">
+                            <span class="word"></span>
+                            <span class="word"></span>
+                        </div>
+                        <div class="property">
+                            <span class="word"></span>
+                            <span class="word"> </span>
+                        </div>
+                    </div>
+                    <div class="dic-right">
+                        <div class="property">
+                            <span class="word">
+
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="footer-area">
+                <p> Group 2 Dictionary API</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" Cache-Control:
+        no-cache></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" Cache-Control: no-cache></script>
+    <script src="js/script.js" Cache-Control: no-cache></script>
+</body>
+
+</html>

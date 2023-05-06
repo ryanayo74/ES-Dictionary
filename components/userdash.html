@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/6b203b1712.js" crossorigin="anonymous"></script>
+    <title>ES - Dashboard</title>
+</head>
+<body>
+    <div class="container">
+        <div class="user-dashboard">
+            <h2 class="user">User Profile</h2>
+            <div class="user-profile">
+            <div class="user-avatar">
+                <img src="images/profile.webp" alt="User Avatar">
+                <label for="avatar-upload" class="avatar-label">Photo</label>
+                <input type="file" id="avatar-upload" class="avatar-input">
+            </div>
+            <div class="user-info">
+                <h2 contenteditable="false">Name</h2>
+                <p contenteditable="false">Gmail</p>
+                <p contenteditable="false">Phone Number</p>
+              </div>
+            </div>
+            <div class="user-actions">
+              <h2>User Actions</h2>
+              <ul>
+                <li><a href="#" id="edit-profile-link">Edit Profile</a></li>
+                <li><a href="#">Change Password</a></li>
+                <li><a href="#">Logout</a></li>
+              </ul>
+            </div>
+    </div>
+
+    <script src="userdash.js"> </script>
+</body>
+</html>

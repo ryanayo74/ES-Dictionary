@@ -120,15 +120,20 @@ function handleSearch() {
       document.getElementById('image').src = imageUrl;
     });
 
+
+}
+
+{
+
  //WEATHER by RYAN
- const wrapper = document.querySelector(".wrapper"),
+const wrapper = document.querySelector(".wrapper"),
 inputPart = document.querySelector(".input-part"),
 infoTxt = inputPart.querySelector(".info-txt"),
 inputField = inputPart.querySelector("input"),
 locationBtn = inputPart.querySelector("button"),
 weatherPart = wrapper.querySelector(".weather-part"),
 wIcon = weatherPart.querySelector("img"),
-arrowBack = wrapper.querySelector("header i");
+arrowBack = wrapper.querySelector("#back-icon");
 
 var api;
 
@@ -211,28 +216,114 @@ function weatherDetails(info){
         infoTxt.innerText = "";
         inputField.value = "";
         wrapper.classList.add("active");
+        arrowBack.classList.add("active");
+
     }
 }
 
 arrowBack.addEventListener("click", ()=>{
     wrapper.classList.remove("active");
+    arrowBack.classList.remove("active");
 });
+
+// toggle btn for Weather JS by ROME
+const toggleSwitch = document.querySelector('#toggle-switch');
+
+toggleSwitch.addEventListener('click', () => {
+  toggleSwitch.classList.toggle('on');
+});
+
+
 
 // End Of Weather JS
 
-
 }
+
+
+
+
+
+
+
 
 //clear btn  by ROME
 const inputTxt = document.getElementById('search-input');
 const clearBtn = document.getElementById('clearBtn');
 
+
+//clear btn update
+const dictionaryTitles = document.querySelectorAll('#lefty a, #righty a');
+
 clearBtn.addEventListener('click', (e) => {
   e.preventDefault();
   const image = document.getElementById('image');
-  image.src = '';
-  inputTxt.value = '';
+
   document.querySelectorAll('#inputTxt, #audio, #definition, #part-of-speech, #thisword, #title').forEach(elem => elem.innerHTML = '');
+  inputTxt.value = '';
+  image.src = '';
+
+
+  //clear btn DOM update
+  dictionaryTitles.forEach(title => {
+    title.classList.add('hidden');
+  });
+
+});
+
+
+
+
+// Change color 
+// const searchInput = document.getElementById('search-input');
+// const searchBtn = document.getElementById('search-btn');
+// const searchResult = document.getElementById('word');
+
+// searchBtn.addEventListener('click', () => {
+//   const searchTerm = searchInput.value;
+//   if (searchTerm.trim() !== '') {
+//     if (searchResult.textContent.includes(searchTerm)) {
+//       searchResult.style.color = 'green';
+//     } else {
+//             searchResult.style.color = 'red';
+//     }
+//   }
+// });
+
+// Hide footer in sidebar when toggle is active
+
+const toggleBtn = document.querySelector('.toggle');
+const textToRemove = document.querySelector('.footer_copyright');
+
+toggleBtn.addEventListener('click', () => {
+  textToRemove.classList.toggle('footer_copyright_hidden');
+});
+
+// Hide words
+
+const searchInput = document.querySelector('#search-input');
+const searchBtn = document.querySelector('#search-btn');
+const hiddenTexts = document.querySelectorAll('.hidden');
+
+function showHiddenText() {
+  hiddenTexts.forEach((text) => {
+    text.classList.toggle('hidden', searchInput.value === '');
+  });
+}
+
+searchInput.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    showHiddenText();
+  }
+});
+
+searchButton.addEventListener('click', () => {
+  showHiddenText();
+});
+
+searchInput.addEventListener('input', () => {
+  hiddenTexts.forEach((text) => {
+    text.classList.add('hidden');
+  });
 });
 
 
